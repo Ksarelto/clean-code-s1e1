@@ -127,6 +127,8 @@ var taskCompleted = function () {
 
     //Append the task list item to the #completed-tasks
     var listItem = this.parentNode;
+    var label = listItem.querySelector(".list__label");
+    label.className = "list__label list__label_complited-task";
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -139,6 +141,8 @@ var taskIncomplete = function () {
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem = this.parentNode;
+    var label = listItem.querySelector(".list__label");
+    label.className = "list__label list__label_incompleted-task";
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
 }
@@ -161,9 +165,9 @@ addButton.addEventListener("click", ajaxRequest);
 var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
     console.log("bind list item events");
     //select ListItems children
-    var checkBox = taskListItem.querySelector("input[type=checkbox]");
-    var editButton = taskListItem.querySelector("button.edit");
-    var deleteButton = taskListItem.querySelector("button.delete");
+    var checkBox = taskListItem.querySelector(".list__checkbox");
+    var editButton = taskListItem.querySelector(".list__btn_edit");
+    var deleteButton = taskListItem.querySelector(".list__btn_delete");
 
 
     //Bind editTask to edit button.
