@@ -161,10 +161,6 @@
   width: 318px;
 }
 
-.add-item__button:hover {
-  color: #0fc57c;
-}
-
 /*COMPLETED Block*/
 
 .list__label_complited-task {
