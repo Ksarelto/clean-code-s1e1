@@ -1,6 +1,5 @@
-
 .matrix {
-background-color: #f8f8f8;
+  background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
@@ -13,11 +12,9 @@ background-color: #f8f8f8;
 }
 
 @media (max-width: 768px) {
-
   .header {
     text-align: center;
   }
-
 }
 
 .add-item__input,
